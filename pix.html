@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Bienal|PagPIX</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial;
+    background-color:#5a250d;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    background:#f5f5f5;
+    padding:30px;
+    border-radius:10px;
+    width:350px;
+    text-align:center;
+}
+
+.pix-box{
+    background:#5a250d;
+    color:white;
+    padding:12px;
+    border-radius:8px;
+    margin-bottom:10px;
+}
+
+img{
+    width:150px;
+    margin:20px 0;
+}
+
+button{
+    margin-top:15px;
+    padding:10px 20px;
+    border:none;
+    border-radius:20px;
+    background:#5a250d;
+    color:white;
+    cursor:pointer;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <h2>Método de Pagamento</h2>
+
+    <div class="pix-box">PIX</div>
+
+    <p>98217-329630641</p>
+
+    <!-- TROCAR PELA SUA IMAGEM -->
+    <img src="codigo_qr.webp" alt="QR Code">
+
+    <p>Produto selecionado<br>R$ 5,50</p>
+
+    <button onclick="finalizar()">Concluir</button>
+</div>
+
+<script>
+function finalizar(){
+    alert("Pagamento realizado!");
+    window.location.href = "index.html";
+}
+</script>
+
+<script>
+window.onload = function(){
+    let metodo = localStorage.getItem("pagamento");
+
+    if(metodo !== "pix"){
+        window.location.href = "pagamento.html";
+    }
+}
+
+function finalizar(){
+    let usuario = localStorage.getItem("usuario");
+
+    alert("Pagamento via PIX confirmado!\nUsuário: " + usuario);
+
+    localStorage.clear();
+    window.location.href = "index.html";
+}
+</script>
+</body>
+</html>

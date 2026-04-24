@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #fff;
+    font-family: sans-serif;
+    width: 100%;
+}
+
+.logo-topo {
+    width: 120px;
+    margin: 20px;
+}
+.fundo-bege {
+    background-color: #F8F1E9; /* Bege clarinho da imagem */
+    margin: 20px;
+    padding: 30px;
+    border-radius: 20px;
+    min-height: 400px;
+}
+
+.card-item {
+    background: white;
+    border: 1px solid #333; /* Bordinha fina */
+    border-radius: 50px; /* Bordas bem arredondadas como na foto */
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.info-produto {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.info-produto img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.nome { font-weight: bold; font-size: 14px; margin: 0; }
+.preco { font-size: 13px; color: #555; margin: 0; }
+
+.controles {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-qtd {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn-lixeira {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.resumo-total {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.btn-pagar {
+    background-color: #5E2208;
+    color: white;
+    border: none;
+    padding: 12px 60px;
+    border-radius: 12px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+
+
+.s-3{
+    position: fixed;
+    bottom: 0; 
+    width: 100%;
+    height: 80px;
+    background-color: #5E2208;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.s-3 a{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #8A6754;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.s-3 img{
+    width: 20px;
+}
+
+
+
+.s-3 a:hover {
+     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+     transform: translateY(-20px);
+     background-color: black;
+     
+    
+}
+
+.s-3 h6{
+    color: white;
+    margin-top: 4px;
+    text-align: center;
+
+}
+
+
+
+

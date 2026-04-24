@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Bienal</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #5a250d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container{
+            width: 900px;
+            height: 550px;
+            background: white;
+            display: flex;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+        .lado-esquerdo{
+            width: 55%;
+            background-image: url("fundo.png");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lado-esquerdo img{
+            width: 250px;
+        }
+
+        .lado-direito{
+            width: 45%;
+            background: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2{
+            margin-bottom: 40px;
+        }
+
+        form{
+            width: 80%;
+        }
+
+        label{
+            font-weight: bold;
+        }
+
+        input{
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            margin-bottom: 25px;
+            border-radius: 20px;
+            border: 1px solid #999;
+            outline: none;
+        }
+
+        button{
+            width: 60%;
+            padding: 12px;
+            border: none;
+            background-color: #5a250d;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: auto;
+        }
+
+        button:hover{
+            background-color: #7a3514;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="lado-esquerdo">
+        <img src="src/assets/images/logo_bienal 3.png" alt="Logo">
+    </div>
+
+    <div class="lado-direito">
+        <div class="icone">
+            <img src="src/assets/images/perfil-de-usuario 1.png" alt="perfil">
+        </div>
+
+        <h2>Faça seu login</h2>
+
+        <!-- FORM CORRETO -->
+        <form onsubmit="login(event)">
+            <label>Usuário</label>
+            <input type="text" id="usuario" placeholder="Digite seu usuário">
+
+            <label>Senha</label>
+            <input type="password" id="senha" placeholder="Digite sua senha">
+
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+</div>
+
+<script>
+function login(event){
+    event.preventDefault();
+
+    let usuario = document.getElementById("usuario").value;
+    let senha = document.getElementById("senha").value;
+
+    if(usuario.trim() === "" || senha.trim() === ""){
+        alert("Preencha todos os campos!");
+        return;
+    }
+
+    // salva usuário
+    localStorage.setItem("usuario", usuario);
+
+    // vai para pagamento
+    window.location.href = "pagamento.html";
+}
+</script>
+
+</body>
+</html>
