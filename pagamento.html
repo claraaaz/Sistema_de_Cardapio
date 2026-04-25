@@ -5,48 +5,62 @@
 <title>Bienal|Pagamento</title>
 
 <style>
-body{
-    margin:0;
+
+body {
+    margin: 0;
     font-family: Arial;
-    background-color:#5a250d;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
 }
 
+
+.logo {
+    padding: 20px;
+}
+
+
+.metodos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+
 .container{
-    background:#f5f5f5;
+    
     padding:30px;
     border-radius:10px;
-    width:350px;
+  
     text-align:center;
 }
 
-h2{
+h2{text-align: center;
     margin-bottom:20px;
 }
 
 .option{
     border:1px solid #ccc;
-    padding:12px;
+    padding:20px;
+    width: 20vw;
     margin:10px 0;
-    border-radius:8px;
+    border-radius:15px;
     cursor:pointer;
 }
 
 .option:hover{
-    background:#ddd;
+    background:#775645;
 }
 
 .selected{
+
     background:#5a250d;
     color:white;
     border:none;
 }
 
 button{
-    margin-top:15px;
+    
+    
+   
     padding:10px 20px;
     border:none;
     border-radius:20px;
@@ -58,17 +72,22 @@ button{
 
 </head>
 <body>
-
-<div class="container">
-    <h2>Método de Pagamento</h2>
-
-    <div class="option" onclick="selecionar(event, 'debito')">Cartão Débito</div>
-    <div class="option" onclick="selecionar(event, 'credito')">Cartão Crédito</div>
-    <div class="option" onclick="selecionar(event, 'pix')">PIX</div>
-    <div class="option" onclick="selecionar(event, 'dinheiro')">Dinheiro</div>
-
-    <button onclick="continuar()">Selecionar</button>
-</div>
+    <div class="logo">
+        <img src="src/assets/images/logo.png" alt="">
+    </div>
+    
+    <div class="metodos">
+        <div class="container">
+            <h2>Método de Pagamento</h2>
+    
+            <div class="option"> <h3>Cartão Débito</h3></div>
+            <div class="option"> <h3>Cartão Crédito</h3></div>
+            <div class="option"><h3>PIX</h3></div>
+            <div class="option"><h3>Dinheiro</h3></div>
+    
+            <button>Selecionar</button>
+        </div>
+    </div>
 
 <script>
 let metodoSelecionado = "";
